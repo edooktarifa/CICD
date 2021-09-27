@@ -1,3 +1,4 @@
 os: osx
 language: swift
 osx_image: xcode12.5.1
+script: 'xcodebuild clean test -project CICD.xcodeproj -scheme "CICD" -sdk iphonesimulator -destination "platform=iOS Simulator, OS: 14.5, name=iPhone 11" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO'
